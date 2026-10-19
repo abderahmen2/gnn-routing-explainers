@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\small
+\caption{One-time and per-explanation cost. Online cost is a multiple of one batch-1 forward pass. Only PGExplainer amortises: it trains a mask generator once, after which each explanation is cheap. Perturbation methods carry no training cost but pay it back many times over per explanation, since each draws hundreds of forward passes.}
+\label{tab:delay}
+\begin{tabular}{lrrl}
+\toprule
+Explainer & Offline & Online & Band \\
+ & (one-time) & ($\times$ fwd) & \\
+\midrule
+Random (control) & -- & 0.00 & free \\
+MaxWeight (control) & -- & 0.01 & free \\
+Saliency (ours, edge-weight) & -- & 1.86 & cheap \\
+PGExplainer & 104\,s & 3.45 & costly \\
+Deconvolution & -- & 4.95 & costly \\
+InputXGradient & -- & 5.03 & costly \\
+GuidedBackprop & -- & 5.07 & costly \\
+GNNExplainer & -- & 50.80 & offline \\
+IG (ours, edge-weight) & -- & 62.83 & offline \\
+IntegratedGradients & -- & 143.34 & offline \\
+LIME & -- & 805.65 & offline \\
+KernelSHAP & -- & 919.00 & offline \\
+ShapleyValueSampling & -- & 3148.84 & offline \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Explanation quality under one metric in two domains: explanation as binary edge classification against ground truth. BA-Shapes anchors the harness against published figures; routing is the planted bottleneck against the off-path decoys, which share its weight distribution and so neutralise any advantage from reading edge features. Chance is 0.5.}
+\label{tab:transfer}
+\begin{tabular}{lrrrr}
+\toprule
+Explainer & Pub. & BA-Shapes & Routing & $\Delta$ \\
+\midrule
+IntegratedGradients & -- & 0.995 & 0.866 & $-0.128$ \\
+ShapleyValueSampling & -- & 0.994 & 0.896 & $-0.098$ \\
+Deconvolution & -- & 0.996 & 0.875 & $-0.122$ \\
+InputXGradient & -- & 0.995 & 0.864 & $-0.131$ \\
+GuidedBackprop & -- & 0.996 & 0.773 & $-0.223$ \\
+KernelSHAP & -- & 0.803 & 0.750 & $-0.053$ \\
+LIME & -- & 0.928 & 0.712 & $-0.216$ \\
+\midrule
+PGExplainer & 0.963 & 1.000 & 0.625 & $-0.375$ \\
+GNNExplainer & 0.925 & 0.991 & 0.590 & $-0.401$ \\
+\midrule
+MaxWeight (control) & -- & -- & 0.531 & -- \\
+Random (control) & -- & 0.478 & 0.490 & $+0.012$ \\
+\bottomrule
+\end{tabular}
+\end{table}

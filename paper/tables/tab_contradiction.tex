@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\small
+\caption{The two metrics disagree. Ground-truth AUC is recovery of the planted bottleneck against the decoys; Fid$^+$ is the signed change in predicted path cost when the explanation is removed, with the standard error of its mean. The last column reports whether Fid$^+$ is distinguishable from \emph{all three} controls at $|z|>2$. Nine of eleven methods recover the bottleneck above $0.70$; three are separable under fidelity.}
+\label{tab:contradiction}
+\begin{tabular}{lrr@{\,$\pm$\,}lc}
+\toprule
+Explainer & GT AUC & \multicolumn{2}{c}{Fid$^+$ (ms)} & $\ne$ controls \\
+\midrule
+IG (ours, edge-weight) & 0.914 & -2.77 & 2.08 & -- \\
+ShapleyValueSampling & 0.896 & +8.04 & 1.98 & \checkmark \\
+Saliency (ours, edge-weight) & 0.875 & -14.01 & 2.41 & \checkmark \\
+Deconvolution & 0.875 & -5.84 & 2.48 & -- \\
+IntegratedGradients & 0.866 & -0.84 & 2.31 & -- \\
+InputXGradient & 0.864 & -2.83 & 2.66 & -- \\
+GuidedBackprop & 0.773 & +2.03 & 2.41 & -- \\
+KernelSHAP & 0.750 & +2.61 & 1.56 & -- \\
+LIME & 0.712 & +8.37 & 1.66 & \checkmark \\
+PGExplainer & 0.625 & -2.75 & 0.95 & -- \\
+GNNExplainer & 0.590 & -3.65 & 1.14 & -- \\
+\midrule
+ShortestPath (control) & 0.600 & -7.39 & 2.06 & -- \\
+MaxWeight (control) & 0.531 & +1.16 & 0.72 & -- \\
+Random (control) & 0.490 & -2.17 & 0.75 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

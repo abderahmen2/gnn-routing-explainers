@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite the paper below."
+title: "Ground-Truth Evaluation of Graph Neural Network Explainers for Network Routing"
+abstract: >-
+  A routing task over real network topologies with planted, per-sample-verified
+  bottleneck links and off-route decoys, used to evaluate eleven GNN explainers
+  against a known reference explanation rather than against fidelity.
+type: software
+authors:
+  - family-names: "Ben Azzouna"
+    given-names: "Mohamed Ali"
+    email: "mohamedali.benazzouna@outlook.com"
+license: MIT
+keywords:
+  - explainable AI
+  - graph neural networks
+  - network routing
+  - fidelity
+  - evaluation
+references:
+  - type: article
+    title: "The Internet Topology Zoo"
+    authors:
+      - family-names: "Knight"
+        given-names: "Simon"
+    journal: "IEEE Journal on Selected Areas in Communications"
+    volume: 29
+    issue: 9
+    year: 2011
+  - type: article
+    title: "SNDlib 1.0 -- Survivable Network Design Library"
+    authors:
+      - family-names: "Orlowski"
+        given-names: "Sebastian"
+    journal: "Networks"
+    volume: 55
+    issue: 3
+    year: 2010
